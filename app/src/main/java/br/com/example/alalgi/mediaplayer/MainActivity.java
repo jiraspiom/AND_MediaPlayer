@@ -111,5 +111,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null && mediaPlayer.isPlaying()){
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(mediaPlayer.isPlaying()){
+            mediaPlayer.pause();
+        }
+
+    }
 }
