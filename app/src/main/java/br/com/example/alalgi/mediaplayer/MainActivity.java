@@ -11,6 +11,8 @@ import android.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
 
+    //APLICATIVO FINALIZADO
+
     private MediaPlayer mediaPlayer;
     private Button buttonPlay, buttonPause, buttonStop;
     private SeekBar seekVolume;
@@ -87,8 +89,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
 
     public void executaSom(){
         if (mediaPlayer != null) {
